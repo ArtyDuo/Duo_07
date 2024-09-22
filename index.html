@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duo Lineage</title>
+    <!-- CSS is here -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .lineage {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .collapsible {
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 4px;
+            margin: 5px 0;
+        }
+        .active, .collapsible:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            margin: 5px 0;
+            border-left: 3px solid #007bff;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 10px;
+        }
+        li {
+            margin: 3px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Duo Lineage</h1>
+    <div class="lineage">
+        <button class="collapsible">Dili Lineage</button>
+        <div class="content">
+            <ul>
+                <li><strong>Dili</strong> begat Pao.</li>
+                <li><b>Pao</b> begat Ti.</li>
+                <li><b>Ti</b> begat Three Sons <button class="collapsible"> Three Sons:</button>
+                    <ul>
+                        <li>Chulu (no sons)</li>
+                        <li>Laochao (no sons)</li>
+                        <li>Kha <button class="collapsible"> Kha Descendants:</button>
+                        </li>
+                            <ul>
+                                <li>Kha begat Kholu.</li>
+                                <li>Kholu begat Ngaolu.</li>
+                                <li>Ngaolu’s Descendants:
+                                    <ul>
+                                        <li>Yiizii begat Chao.</li>
+                                        <li>Chao begat two sons:
+                                            <ul>
+                                                <li>Paoyu</li>
+                                                <li>Khulu</li>
+                                            </ul>
+                                        </li>
+                                        <li>Paoyu’s Descendants (Chao’s son):
+                                            <ul>
+                                                <li>Paoyu begat Khohro, Kha, Daova, Khochi, and Yudu.</li>
+                                                <li>Khohro’s Descendants (Paoyu’s Son):
+                                                    <ul>
+                                                        <li>Khohro begat Vi.</li>
+                                                        <li>Vi begat Seiba.</li>
+                                                        <li>Seiba begat Ngaolu.</li>
+                                                        <li>Ngaolu begat Dazii.</li>
+                                                        <li>Dazii begat Ruth, Jona, Helenah, Senai, Silina, Poanai, Duo, Esther, and Hoping.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Kha’s Descendants (Paoyu’s Son):
+                                                    <ul>
+                                                        <li>Kha begat Pao.</li>
+                                                        <li>Pao begat Paoyu.</li>
+                                                        <li>Paoyu begat Anthony and Atho.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Daova’s Descendants (Paoyu’s Son):
+                                                    <ul>
+                                                        <li>Daova begat Chulu and Khazii.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Chulu’s Descendants (Daova’s Son):
+                                                    <ul>
+                                                        <li>Chulu begat Khohri.</li>
+                                                        <li>Khohri begat Khochi.</li>
+                                                        <li>Khochi begat Vahrii, Pavei, Lovely, and Mevei.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Khazii’s Descendants (Daova’s Son):
+                                                    <ul>
+                                                        <li>Khazii begat Nasii.</li>
+                                                        <li>Nasii begat Veikho.</li>
+                                                        <li>Veikho begat Pouveinai.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Khochi’s Descendants (Paoyu’s Son):
+                                                    <ul>
+                                                        <li>Khochi begat Thaimoso.</li>
+                                                        <li>Thaimoso begat Kha, Seizii, Louni, and Hrailu.</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Additional sections can be added similarly for other branches -->
+        
+    </div>
+
+    <!-- JavaScript is here -->
+    <script>
+        const collapsibles = document.querySelectorAll(".collapsible");
+        collapsibles.forEach(item => {
+            item.addEventListener("click", function() {
+                this.classList.toggle("active");
+                const content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
